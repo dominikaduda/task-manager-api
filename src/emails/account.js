@@ -1,6 +1,6 @@
 const sgMail = require('@sendgrid/mail')
 
-sgMail.setApiKey('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')
+sgMail.setApiKey(process.env.MONGODB_URL)
 
 const sendWelcomeEmail = (email, name) => {
     sgMail.send({
